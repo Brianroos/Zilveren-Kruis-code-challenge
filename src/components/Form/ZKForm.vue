@@ -192,7 +192,11 @@
                 <label class="input__title">
                     Kies de hoogste van het eigen risico
                 </label>
-                <select class="form-control" v-model="controle.selectedOwnRisk">
+                <select
+                    class="form-control"
+                    v-model="controle.selectedOwnRisk"
+                    :disabled="!controle.selectedInsurance"
+                >
                     <option
                         v-for="ownRisk in OwnRiskOptions"
                         v-bind:key="ownRisk"
